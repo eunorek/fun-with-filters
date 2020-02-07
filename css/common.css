@@ -1,0 +1,74 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#navbar{
+    background-color :#434343ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+#navbar-title{
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px;
+    color: goldenrod;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#navbar-menu{
+    /* 네비게이션 우측에 붙이기 */
+    float: right;
+    margin: auto;
+}
+
+.navbar-menu-item{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;      
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-menu-item:hover{
+    color: goldenrod;
+}
+    
+
+.page-active{
+    color: gray;
+}
+
+#main {
+    display: flexbox;
+    margin: 5% 5%;
+    height: auto;
+  }
+  
+#footer{
+    /* background-color: #434343ff; */
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+}
+
+.footer-content{
+    margin: auto;
+    width: 70%;
+}
+
+.footer-content  div{
+    display: inline-block;
+    margin: 20px;
+    padding: 0;
+    height: 100%;
+    color: gray;
+}

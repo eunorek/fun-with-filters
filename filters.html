@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fun With Filters - Filters</title>  
+    <script src="https://kit.fontawesome.com/323970fb5e.js" crossorigin="anonymous"></script>
+    <!-- 전 페이지에 공통적으로 적용됨 -->
+    <link href="css/common.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 페이지별 개별적으로 적용되는 css 파일 -->
+    <link href="css/filters.css" rel="stylesheet">
+</head>
+<body>
+<!-- top navbar -->
+<section id="navbar">
+    <!-- left: logo and title -->
+    <span id="navbar-title">
+        <i class="fas fa-camera-retro"></i>
+        Fun With Filters
+    </span>
+    <!-- right: pages menu -->
+    <span id="navbar-menu">
+        <!-- 현재 페이지 dim 처리, hover 시 highlight -->
+        <a class="navbar-menu-item" href="./home.html"><i class="fas fa-home"></i> Home</a>    
+        <a class="navbar-menu-item page-active" href="./filters.html"><i class="fas fa-images"></i> Filters</a>    
+        <a class="navbar-menu-item" href="about.html"><i class="fas fa-user-secret"></i> About</a>    
+    </span>
+</section>
+<section id="main">
+    <div id="canvas-area">
+        <!-- 원본 이미지 영역 -->
+        <span class="canvas-wrapper" id="wrapper-original">
+            <h2>원본 이미지</h2>
+            <canvas id="img-original"></canvas>
+            <div class="btn-wrapper">
+            <!-- 이미지 업로드 버튼 -->
+                <input id="uploader" type="file" multiple="false" accept="image/*" oninput="uploadImg()"/>             
+            </div>         
+        </span>
+        <!-- 변경된 이미지 영역 -->
+        <span class="canvas-wrapper" id="wrapper-modified">
+            <h2>필터 적용 이미지</h2>
+            <canvas id="img-modified"></canvas>
+            <div class="btn-wrapper">
+                <input id="reset" type="button" value="이미지 초기화" onclick="resetImg()"/>
+                <a id="downloader" download="image_modified.png">
+                    <button type="button" onClick="downloadImg()">다운로드</button>
+                </a>
+            </div>
+        </span>
+    </div>
+    <div id="filter-area">
+        <span class="filter-wrapper">
+            <input type="button" value="Red" onclick="redFilter()"/>
+            <input type="button" value="Green" onclick="greenFilter()"/>
+            <input type="button" value="Blue" onclick="blueFilter()"/>
+            <input type="button" value="Gray Scale" onclick="grayscaleFilter()"/>
+        </span>
+        <span class="filter-wrapper">
+            <input type="button" value="Brighter" onclick="brighterFilter()"/>
+            <input type="button" value="Dimmer" onclick="dimmerFilter()"/>
+            <input type="button" value="Rainbow" onclick="rainbowFilter()"/>
+            <input type="button" value="Россия" onclick="ruskiFilter()"/>
+        </span>
+
+    </div>
+    <script src="js/simpleimage.js"></script>
+    <script src="js/filters.js"></script>
+</section>
+
+<!-- footer -->
+<section id="footer">
+    <hr>
+    <div class="footer-content">
+        <div id="cc-icon">
+            <img alt="Creative Commons License" style="height: 5%" src="https://i.creativecommons.org/l/by/3.0/88x31.png"/>
+        </div>
+        <div>
+            This work is licensed under a<br>
+            <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"> Creative Commons Attribution 3.0 Unported License</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>
