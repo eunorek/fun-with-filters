@@ -1,0 +1,21 @@
+#main{
+    display: block;
+    margin: 10rem auto;
+}
+#profile-wrapper{
+    padding: auto;
+    margin: auto;
+    width: 80%;
+}
+
+#profile-wrapper > div{
+    display: inline-block;
+    margin: auto;
+    width: 40%;
+}
+
+#profile-img{
+    width: 90%;
+    border: solid black 2px;
+}
+
